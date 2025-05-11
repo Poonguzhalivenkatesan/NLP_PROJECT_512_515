@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Email Spam Classifier</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; text-align: center; }
+        .result { padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .spam { background-color: #ffdddd; border-left: 6px solid #f44336; }
+        .ham { background-color: #ddffdd; border-left: 6px solid #4CAF50; }
+        .email-text { background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; }
+        .back-btn { display: inline-block; margin-top: 20px; text-decoration: none; 
+                   background-color: #333; color: white; padding: 10px 15px; }
+    </style>
+</head>
+<body>
+    <h1>Classification Result</h1>
+    <div class="result {% if prediction == 'spam' %}spam{% else %}ham{% endif %}">
+        <h2>This email is <strong>{{ prediction }}</strong></h2>
+    </div>
+    
+    <h3>Original Text:</h3>
+    <div class="email-text">
+        {{ email_text }}
+    </div>
+    
+    <a href="/" class="back-btn">Check Another Email</a>
+</body>
+</html>

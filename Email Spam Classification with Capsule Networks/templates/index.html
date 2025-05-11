@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Classifier</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; text-align: center; }
+        .form-group { margin-bottom: 15px; }
+        textarea { width: 100%; height: 200px; padding: 10px; border: 1px solid #ddd; }
+        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Email Spam Classifier</h1>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="email_text">Enter your email text:</label>
+            <textarea id="email_text" name="email_text" required></textarea>
+        </div>
+        <button type="submit">Check for Spam</button>
+    </form>
+</body>
+</html>
